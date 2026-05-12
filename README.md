@@ -1,37 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CineVault - Galería de Películas y Series 🎬
 
-## Getting Started
+Este proyecto es una aplicación web de alto rendimiento desarrollada para el **Laboratorio 09 de Desarrollo de Aplicaciones Web**. La aplicación combina estrategias de renderizado híbrido (**SSR y CSR**) para ofrecer una experiencia de usuario rápida, interactiva y visualmente impactante, utilizando la **OMDb API**.
 
-First, run the development server:
+## 🚀 Características Principales
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. Renderizado Híbrido (Arquitectura Next.js)
+- **SSR (Server-Side Rendering):** Implementado en la sección de "Destacados". Los datos se obtienen en el servidor antes de enviar la página al navegador, optimizando el SEO y reduciendo el tiempo de carga inicial (LCP).
+- **CSR (Client-Side Rendering):** Utilizado en el buscador interactivo. Permite realizar búsquedas en tiempo real y manejar estados complejos (como el modal de detalles) sin necesidad de recargar la página completa.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Interfaz Premium y Animaciones
+- **GlowCard System:** Tarjetas interactivas con efectos de iluminación tridimensional que reaccionan al movimiento del cursor (Houdini CSS).
+- **Cinematic Detail Modal:** Un panel de detalles ultra-premium que utiliza `framer-motion` para transiciones suaves, fondos cinemáticos desenfocados y un borde animado infinito mediante `GlowingShadow`.
+- **Buscador Inteligente:** Barra de búsqueda animada con gradientes dinámicos y micro-interacciones.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Robustez de Datos
+- **SafeImage Component:** Sistema de seguridad que detecta imágenes rotas de la API y las reemplaza automáticamente con placeholders elegantes, garantizando que la galería siempre se vea profesional.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tecnologías Utilizadas
 
-## Learn More
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Estilos:** Tailwind CSS
+- **Animaciones:** Framer Motion
+- **API de Datos:** [OMDb API](https://www.omdbapi.com/)
+- **Librería de Peticiones:** Axios
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Instalación y Configuración
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/tecsup-labs/lab-nextjs-hybrid-rendering-dashboard.git
+   cd lab-nextjs-hybrid-rendering-dashboard
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Configurar la API Key:**
+   El proyecto utiliza la API Key de OMDb. Asegúrate de tener conexión a internet para que las peticiones se realicen correctamente.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Ejecutar en modo desarrollo:**
+   ```bash
+   npm run dev
+   ```
+   La aplicación estará disponible en [http://localhost:3000/movies](http://localhost:3000/movies).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# lab-nextjs-hybrid-rendering-dashboard
+## 🎓 Conclusiones del Laboratorio
+
+El desarrollo de **CineVault** permitió profundizar en la importancia de elegir la estrategia de renderizado adecuada para cada tipo de contenido. Mientras que el SSR garantiza que el contenido principal esté disponible de inmediato, el CSR dota a la aplicación de una interactividad fluida típica de una aplicación moderna. La optimización de eventos y el manejo de errores de APIs externas fueron fundamentales para lograr un producto final estable y de alta calidad visual.
+
+---
+**Desarrollo de Aplicaciones Web - 2026**
